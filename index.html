@@ -15,13 +15,75 @@
     <!--  We included a basic HTML structure for the 3 graphs here. Feel free to change this if you'd like  -->
     <div class="row">
         <div class="col-lg-6">
-            <div id="graph1"></div>
-            <div id="graph2"></div><br/>
-        </div>
-        <div class="col-lg-6">
-            <div id="graph3"></div>
+            <h2>Top 10 Games Per Year</h2>
+            <label>Year:</label>
+            <input type="number" min="1981" max="2016" value="2006" oninput="setData(this.value)">
+            <br>
+            <graph1></graph1>
+            <hr>
+            <h2>Top Genre by Total Sales in...</h2>
+            <p>Hover over the graph to see the data!</p>
+            <graph2></graph2>
+            <hr>
+            <br>
+            <h2>Top Game Developers by Genre</h2>
+            <button type="button" class="btn btn-info" onclick="setData3(0)">Action</button>
+            <button type="button" class="btn btn-info" onclick="setData3(1)">Sports</button>
+            <button type="button" class="btn btn-info" onclick="setData3(2)">Shooter</button>
+            <button type="button" class="btn btn-info" onclick="setData3(3)">Racing</button>
+            <button type="button" class="btn btn-info" onclick="setData3(5)">Role-Playing</button>
+            <button type="button" class="btn btn-info" onclick="setData3(6)">Platform</button>
+            <button type="button" class="btn btn-info" onclick="setData3(7)">Fighting</button>
+            <button type="button" class="btn btn-info" onclick="setData3(8)">Simulation</button>
+            <button type="button" class="btn btn-info" onclick="setData3(9)">Puzzle</button>
+            <button type="button" class="btn btn-info" onclick="setData3(10)">Adventure</button>
+            <button type="button" class="btn btn-info" onclick="setData3(11)">Strategy</button>
+            <button type="button" class="btn btn-info" onclick="setData3(4)">Misc</button>
+            <graph3></graph3>
+            <hr>
+            <br>
         </div>
     </div>
+    <p>
+    Written Questions:
+    <br>
+    1.
+    <br>
+    My dashboard is vertically divided into three sections that provides answers to the corresponding three main questions. The first section shows the top 10 videogames of every year, which answers question 1.
+    <br>
+    Question 2 is answered by the pie/donut chart section, as each chart corresponds to a region (distinguished in the .csv) and the larger portions of the charts visually inform the audience what genre sells best in which regions. The specific numbers are available to the user by hovering their mouse over the partitions of the chart.
+    <br>
+    Question 3 is answered in the final graph depicting the top 10 best selling videogame developers for each of the genres distinguished in the .csv. The top publisher for each genre is clearly designated by its position at the top of the list.
+    <br>
+    <br>
+    2.
+    <br>
+    D3’s most useful feature for my visualization was the ability to have dynamic, interactive elements that change aspects of the chart (i.e. year, genre). As opposed to a static diagram, interactive charts are more likely to effectively engage the user.
+    <br>
+    Another helpful feature of D3 was it’s versatility and customizability. I used multiple different graph types in my dashboard yet only scratched the surface of all the possibilities available. The ability to make all different types of graphs and customize them endlessly to fit niche specifications is very powerful and helpful when making visualizations.
+    <br>
+    Another reason D3 is advantageous is that it works directly with the .csv file, meaning that if any datapoint in our collection happened to be erroneous and needed to be fixed or removed, we could easily update the .csv and our visualization would be updated accordingly. For other methods of visualizing data, this is not necessarily the case, and a change in the data used to create the visualization would require making a new visualization from scratch.
+    <br>
+    <br>
+    3.
+    <br>
+    One aspect of D3 that I believe diminishes its value as a tool is the low quality of its documentation. I found that the documentation was a little terse and vague and definitely could be improved. Documentation is an incredibly crucial part of a tool, so the lower the quality of the documentation, the lower the quality of the tool.
+    <br>
+    Another reason D3 might not be the best tool is because it is so extremely customizable that it is not optimized for situations where only a simple, quick visualization is required. While D3’s bells and whistles are great, when they aren’t needed, they would become obstructive to creating simpler visualizations.
+    <br>
+    One more potential reason D3 could be a less useful tool to create a visualization would be in a situtation where a different tool is more accessible. For example, if we were working with .csv files directly in Excel or Google Sheets, it would be possible to export the file and build a D3 visualization around the data. But as Excel and Google Sheets already have visualization tools, it would be more advantageous to use those instead of D3 for its efficiency.
+    <br>
+    <br>
+    4.
+    <br>
+    My data visualization is generally accessible to most people. I especially was taking consideration for people who are colorblind, who people who may be using assistive technology, as those groups of people were especially highlighted in the readings. For example, in the second reading, they say specifically to “Separate elements with whitespace or pattern. This means distinguishing between data isn’t entirely reliant on contrast between colors. Add whitespace between adjacent sections in a pie chart, or use different patterns in a line or bar graph.” I noticed that line specifically, so when I implemented my pie/donut chart, I made sure to have white space between the partitions. Also for accessibility for colorblind people, I tried to avoid having color designate anything that wasn’t also designated by text as well. However, people who might have more difficulty accessing this data could be blind people as I didn’t include any auditory options for viewing the data; however, because I was mindful of assistive technologies in the way I designed the text on the page, I think that blind people who use assistive technology would still be able to access the data in someway at a minimum, even if the charts and graphics themselves are less accessible.
+    <br>
+    <br>
+    5.
+    <br>
+    One step I could’ve taken to make my visualization accessible to more audiences would be to avoid using tooltips to display data that is not shown elsewhere on the page. This is less accessible to people who use assistive technology according to the second reading as those sorts of technologies cannot access tooltips or other inputs using the cursor as well. One factor that kept me from avoiding including information only in tooltips was my lack of ability to understand D3 on a deep enough level to be able to enhance my code to account for this.
+    <br>
+    </p>
     <!--Feel free to add more JavaScript files as needed-->
     <script type="text/javascript" src="main.js"></script>
 </body>

@@ -2,7 +2,7 @@
     padding-bottom: 20px;
     margin-bottom: 20px;
 }
-
+ 
 .header > h3, h5 {
     margin: 0;
     padding-top: 20px;
@@ -10,3 +10,16 @@
 }
 
 /* Include any custom CSS styling here! */
+h2 {
+    padding-left: 10px;
+}
+
+label {
+    padding-left: 20px;
+}
+
+p {
+    padding-left: 20px; 
+    color: grey;
+    font-style: italic;
+}
